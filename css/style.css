@@ -1,0 +1,330 @@
+.home-section {
+    background-color: #f0f8ff; /* Light blue color */
+  }
+.navbar-brand img {
+    width: 50px; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  .slide-in {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .home-section {
+    overflow: hidden; /* Prevents overflow during animation */
+  }
+  .container {
+    text-align: center;
+}
+
+.neon-text {
+    font-size: 4rem;
+    color: #66ccff; /* Neon blue color */
+    position: relative;
+    animation: neon 1.5s ease-in-out infinite alternate; /* Animation */
+}
+
+.neon-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: -1; /* Place behind the text */
+    filter: blur(10px); /* Blur effect to simulate glow */
+    opacity: 0.5; /* Adjust opacity for a softer glow */
+}
+
+.neon-subtext {
+    font-size: 2rem;
+    color: #ffffff; /* White color for subtext */
+}
+
+@keyframes neon {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.neon-text {
+  font-size: 4rem;
+  color: #66ccff; /* Neon blue color */
+  position: relative;
+  animation: neon 1.5s ease-in-out infinite alternate; /* Animation */
+}
+
+.neon-text::after {
+  content: attr(data-text); /* Duplicate the text */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #66ccff; /* Same neon color */
+  filter: blur(5px); /* Blur effect to simulate glow */
+  z-index: -1; /* Place behind the text */
+  opacity: 0.5; /* Adjust opacity for a softer glow */
+}
+
+.neon-subtext {
+  font-size: 2rem;
+  color: #ffffff; /* White color for subtext */
+}
+
+.about-box {
+  background-color: rgba(102, 204, 255, 0.1); /* Light blue background with transparency */
+  border: 2px solid #66ccff; /* Neon blue border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  margin-top: 20px; /* Space between subtext and box */
+  max-width: 600px; /* Limit the width of the box */
+  box-shadow: 0 0 15px rgba(102, 204, 255, 0.5); /* Soft glow effect around the box */
+  display: flex; /* Use flexbox for centering text inside the box */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+.about-after-effects {
+  font-size: 1.2rem;
+  color: #ffffff; /* White color for the paragraph */
+  line-height: 1.5; /* Improve readability */
+}
+
+@keyframes neon {
+  0% {
+      text-shadow: 
+          0 0 5px #66ccff, 
+          0 0 10px #66ccff, 
+          0 0 15px #3399cc; /* Glow effect */
+      opacity: 1;
+  }
+  100% {
+      text-shadow: 
+          0 0 10px #66ccff, 
+          0 0 20px #66ccff, 
+          0 0 30px #3399cc; /* Glow effect */
+      opacity: 0.8;
+  }
+}
+
+.product-section {
+  background-color: #222; /* Dark background for the products section */
+  color: #fff;
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card-img-top {
+  border-bottom: 2px solid #66ccff;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-primary {
+  background-color: #66ccff;
+  border-color: #66ccff;
+}
+
+.btn-primary:hover {
+  background-color: #3399cc;
+  border-color: #3399cc;
+}
+/* Social Media Section */
+.social-media-section {
+  background-color: #222; /* Dark background for social media section */
+}
+
+.social-media-section h2 {
+  font-size: 2.5rem;
+  color: #66ccff; /* Neon blue color */
+  text-align: center; /* Center align the heading */
+  margin-bottom: 40px;
+}
+
+.social-media-link {
+  background-color: transparent;
+  border: 2px solid #66ccff;
+  color: #66ccff;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 0 20px rgba(102, 204, 255, 0.3); /* Soft glow effect */
+}
+
+.social-media-link:hover {
+  background-color: #66ccff;
+  color: white;
+}
+
+.social-media-link i {
+  font-size: 3rem;
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #66ccff;
+}
+
+footer a:hover {
+  color: #3399cc;
+}
+
+/* Additional adjustments for responsive layout */
+@media (max-width: 768px) {
+  .social-media-section h2 {
+    font-size: 2rem;
+  }
+
+  .social-media-link {
+    padding: 3rem;
+  }
+
+  .social-media-link i {
+    font-size: 2.5rem;
+  }
+}
+/* Footer Styles */
+footer {
+  background-color: #111;
+  color: #fff;
+}
+
+footer a {
+  color: #66ccff; /* Neon blue for links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #3399cc; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+footer .list-unstyled {
+  padding-left: 0;
+}
+
+footer .text-white {
+  color: #ffffff !important;
+}
+
+footer i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.5rem; /* Size of the icons */
+}
+
+footer .social-links {
+  padding-left: 0;
+}
+
+footer .social-links li {
+  list-style-type: none;
+}
+
+footer .social-links a {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+footer .social-links a:hover {
+  color: #3399cc;
+}
+
+footer .social-links i {
+  font-size: 1.8rem; /* Larger icons for social media */
+  margin-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  footer .row > div {
+    margin-bottom: 30px; /* Space out columns in mobile view */
+  }
+
+  footer h5 {
+    font-size: 1.1rem; /* Slightly smaller heading on mobile */
+  }
+
+  footer ul li {
+    font-size: 0.9rem; /* Smaller text on mobile */
+  }
+
+  footer .social-links i {
+    font-size: 1.5rem; /* Smaller icons on mobile */
+  }
+
+  footer .col-md-4 {
+    text-align: center; /* Center text on small screens */
+  }
+
+  footer .social-links {
+    display: flex;
+    justify-content: center; /* Center social links on small screens */
+  }
+
+  footer .social-links a {
+    margin: 0 10px; /* Space between social media icons */
+  }
+}
+
