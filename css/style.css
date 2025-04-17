@@ -1,41 +1,148 @@
-.home-section {
-    background-color: #f0f8ff; /* Light blue color */
-  }
-.navbar-brand img {
-    width: 50px; /* Adjust the size */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-  }
-
-  .slide-in {
-    transform: translateX(-100%);
-    opacity: 0;
-    animation: slideIn 1s forwards;
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideIn {
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .home-section {
-    overflow: hidden; /* Prevents overflow during animation */
-  }
-  .container {
-    text-align: center;
+.navbar {
+  background-color: #111;
+  border-bottom: 2px solid gold;
 }
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4af37; /* Gold-like hover effect */
+}
+
+.navbar-brand {
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+/* Main Section Styling */
+.home-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+ 
+  color: #fff;
+}
+
+/* Styling for Left Column Text */
+.home-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  color: #e0d6b7;
+}
+
+.home-section p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e0d6b7;
+}
+
+/* Centered Button with Gold Styling */
+.btn-gold {
+  padding: 12px 30px;
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-family: 'Garamond', serif;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #c4942b;
+  transform: translateY(-3px);
+}
+@media (max-width: 600px) {
+  .btn-gold {
+    margin-bottom: 15px; /* adjust the value to your desired spacing */
+  }
+}
+
+/* Right Column with Video Styling */
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+/* Animation Delay */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* Keyframes for animation */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .neon-text {
     font-size: 4rem;
@@ -73,258 +180,686 @@
     }
 }
 
-.container {
-  text-align: center;
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-}
-
+/* Neon Text Styling for Luxury Effect */
 .neon-text {
   font-size: 4rem;
-  color: #66ccff; /* Neon blue color */
+  color: #d4af37; /* Luxurious gold color */
   position: relative;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  letter-spacing: 2px;
   animation: neon 1.5s ease-in-out infinite alternate; /* Animation */
 }
 
-.neon-text::after {
-  content: attr(data-text); /* Duplicate the text */
+.neon-text::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  color: #66ccff; /* Same neon color */
-  filter: blur(5px); /* Blur effect to simulate glow */
   z-index: -1; /* Place behind the text */
-  opacity: 0.5; /* Adjust opacity for a softer glow */
+  filter: blur(12px); /* More subtle blur effect */
+  opacity: 0.6; /* Adjust opacity for a softer glow */
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.8); /* Gold glow effect */
 }
 
+/* Subtext Styling */
 .neon-subtext {
   font-size: 2rem;
-  color: #ffffff; /* White color for subtext */
+  color: #e0d6b7; /* Soft gold for luxury look */
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.about-box {
-  background-color: rgba(102, 204, 255, 0.1); /* Light blue background with transparency */
-  border: 2px solid #66ccff; /* Neon blue border */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside the box */
-  margin-top: 20px; /* Space between subtext and box */
-  max-width: 600px; /* Limit the width of the box */
-  box-shadow: 0 0 15px rgba(102, 204, 255, 0.5); /* Soft glow effect around the box */
-  display: flex; /* Use flexbox for centering text inside the box */
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
-}
-
-.about-after-effects {
-  font-size: 1.2rem;
-  color: #ffffff; /* White color for the paragraph */
-  line-height: 1.5; /* Improve readability */
-}
-
+/* Luxury Animation Effect for Neon Text */
 @keyframes neon {
   0% {
-      text-shadow: 
-          0 0 5px #66ccff, 
-          0 0 10px #66ccff, 
-          0 0 15px #3399cc; /* Glow effect */
+      transform: scale(1);
       opacity: 1;
   }
   100% {
-      text-shadow: 
-          0 0 10px #66ccff, 
-          0 0 20px #66ccff, 
-          0 0 30px #3399cc; /* Glow effect */
+      transform: scale(1.05);
       opacity: 0.8;
   }
 }
 
-.product-section {
-  background-color: #222; /* Dark background for the products section */
-  color: #fff;
-}
-
-.card {
-  margin-bottom: 20px;
+/* About Box Styling */
+.about-box {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background with transparency */
+  padding: 30px;
   border-radius: 10px;
-  overflow: hidden;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Shadow for depth */
 }
 
-.card-title {
-  font-size: 1.5rem;
+/* About After Effects Text Styling */
+.about-after-effects {
+  font-family: 'Garamond', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0d6b7; /* Soft gold color for text */
+  font-weight: 400;
+  text-align: justify;
 }
 
-.card-text {
-  font-size: 1rem;
+/* Optional Hover Effect on Box */
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Enhance shadow for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-img-top {
-  border-bottom: 2px solid #66ccff;
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .neon-text {
+      font-size: 3.5rem; /* Slightly smaller on medium screens */
+  }
+
+  .neon-subtext {
+      font-size: 1.8rem;
+  }
+
+  .about-box {
+      padding: 20px;
+  }
+
+  .about-after-effects {
+      font-size: 1rem;
+  }
 }
 
-.card-body {
-  padding: 20px;
+@media (max-width: 992px) {
+  .neon-text {
+      font-size: 3rem; /* Further reduction for tablets */
+  }
+
+  .neon-subtext {
+      font-size: 1.6rem;
+  }
+
+  .about-box {
+      padding: 15px;
+  }
+
+  .about-after-effects {
+      font-size: 0.95rem;
+  }
 }
 
-.btn-primary {
-  background-color: #66ccff;
-  border-color: #66ccff;
+@media (max-width: 768px) {
+  .neon-text {
+      font-size: 2.5rem; /* Smaller font for mobile */
+      text-align: center;
+  }
+
+  .neon-subtext {
+      font-size: 1.4rem;
+      text-align: center;
+  }
+
+  .about-box {
+      padding: 12px;
+  }
+
+  .about-after-effects {
+      font-size: 0.9rem;
+      text-align: left; /* Adjust text alignment */
+  }
 }
 
-.btn-primary:hover {
-  background-color: #3399cc;
-  border-color: #3399cc;
-}
-/* Social Media Section */
-.social-media-section {
-  background-color: #222; /* Dark background for social media section */
+@media (max-width: 576px) {
+  .neon-text {
+      font-size: 2.2rem; /* Further reduction for smaller mobile screens */
+  }
+
+  .neon-subtext {
+      font-size: 1.2rem;
+  }
+
+  .about-box {
+      padding: 10px;
+  }
+
+  .about-after-effects {
+      font-size: 0.85rem;
+  }
 }
 
-.social-media-section h2 {
-  font-size: 2.5rem;
-  color: #66ccff; /* Neon blue color */
-  text-align: center; /* Center align the heading */
+/* Product Section Styling */
+.product-section {
+  background-color: #1a1a1a; /* Darker background for a more luxurious feel */
+  color: #fff;
+  padding-top: 50px; /* Add top padding for better spacing */
+  padding-bottom: 50px;
+}
+
+.neon-text {
+  font-size: 3rem;
+  color: #d4af37; /* Luxurious gold color for heading */
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: neon 1.5s ease-in-out infinite alternate; /* Animation */
   margin-bottom: 40px;
 }
 
+/* Card Styling */
+.card {
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for luxury effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deep shadow for 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  display: flex;
+  flex-direction: column; /* Ensures content within the card is stacked vertically */
+  height: 400px; /* Fixed height to make all cards the same size */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Hover effect to lift the card */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Ensuring card body always fills the space */
+.card-body {
+  padding: 20px;
+  background-color: #2a2a2a; /* Dark background inside cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures that the button stays at the bottom */
+  flex-grow: 1; /* Makes the card body fill the remaining space */
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.75rem;
+  color: #d4af37; /* Luxurious gold color */
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1.1rem;
+  color: #e0d6b7; /* Soft gold color for text */
+  font-family: 'Garamond', serif;
+  line-height: 1.6;
+}
+
+/* Card Image */
+.card-img-top {
+  width: 100%; /* Ensure the image takes up the full width */
+  height: 200px; /* Fixed image height */
+  object-fit: cover; /* Ensure the image covers the area of the card */
+  transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.card-img-top:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #d4af37; /* Luxurious gold color */
+  border-color: #d4af37;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #bfa63d; /* Darker gold for hover effect */
+  border-color: #bfa63d;
+}
+
+/* Luxurious Hover Effects on Button */
+.btn-primary:focus, .btn-primary:hover {
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.8); /* Glowing effect around button */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .neon-text {
+    font-size: 2.5rem; /* Smaller text size on mobile */
+    margin-bottom: 20px;
+  }
+
+  .card {
+    margin-bottom: 20px; /* Reduced space between cards */
+  }
+
+  .card-title {
+    font-size: 1.5rem; /* Slightly smaller title size */
+  }
+
+  .card-text {
+    font-size: 1rem; /* Adjust text size for smaller screens */
+  }
+
+  .btn-primary {
+    font-size: 0.9rem; /* Smaller button text */
+  }
+}
+
+@media (max-width: 576px) {
+  .neon-text {
+    font-size: 2rem; /* Even smaller on extra small screens */
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    font-size: 0.8rem; /* Adjust button font size */
+  }
+}
+/* Buy More Button Styling */
+.btn-luxury {
+  background-color: #d4af37; /* Luxurious gold color */
+  border-color: #d4af37;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 10px; /* Adds spacing from the products */
+  text-transform: uppercase; /* Makes the text uppercase for more elegance */
+}
+
+.btn-luxury:hover {
+  background-color: #bfa63d; /* Darker gold on hover */
+  border-color: #bfa63d;
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); /* Glowing effect on hover */
+}
+
+/* Responsive Styling for Button */
+@media (max-width: 768px) {
+  .btn-luxury {
+    font-size: 1.1rem; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-luxury {
+    font-size: 1rem; /* Even smaller on mobile */
+  }
+}
+/* Social Media Section Styling */
+.social-media-section {
+  background-color: #1a1a1a; /* Darker background for a more luxurious feel */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.social-media-section h2 {
+  font-size: 3rem;
+  color: #d4af37; /* Luxurious gold color */
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; /* Adds sophistication */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Styling for the social media link buttons */
 .social-media-link {
   background-color: transparent;
-  border: 2px solid #66ccff;
-  color: #66ccff;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0 0 20px rgba(102, 204, 255, 0.3); /* Soft glow effect */
+  border: 2px solid #d4af37; /* Luxurious gold border */
+  color: #d4af37; /* Luxurious gold color */
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 30px 40px; /* Add more padding for a luxurious feel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); /* Soft glowing effect */
 }
 
 .social-media-link:hover {
-  background-color: #66ccff;
+  background-color: #d4af37; /* Gold background on hover */
   color: white;
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.7); /* Glowing effect on hover */
 }
 
+/* Icon styling */
 .social-media-link i {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Slightly larger icons */
+  margin-right: 15px;
 }
 
-footer {
-  background-color: #111;
-  color: #fff;
-  font-size: 0.9rem;
+/* Styling for the text under the icon */
+.social-media-link h3 {
+  font-size: 1.3rem;
+  color: white;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
-footer a {
-  color: #66ccff;
-}
-
-footer a:hover {
-  color: #3399cc;
-}
-
-/* Additional adjustments for responsive layout */
+/* Responsive Styling for smaller screens */
 @media (max-width: 768px) {
+  .social-media-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .social-media-link i {
+    font-size: 3rem; /* Adjust icon size for tablets */
+  }
+
+  .social-media-link h3 {
+    font-size: 1.1rem; /* Adjust text size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
   .social-media-section h2 {
     font-size: 2rem;
   }
 
-  .social-media-link {
-    padding: 3rem;
-  }
-
   .social-media-link i {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Adjust icon size for mobile */
+  }
+
+  .social-media-link h3 {
+    font-size: 1rem; /* Adjust text size further for smaller screens */
   }
 }
-/* Footer Styles */
-footer {
-  background-color: #111;
-  color: #fff;
+
+/* Luxury Footer Styling */
+.luxury-footer {
+  background-color: #1a1a1a; /* Dark background for luxury feel */
+  color: #d4af37; /* Luxurious gold text color */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-footer a {
-  color: #66ccff; /* Neon blue for links */
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #3399cc; /* Darker blue on hover */
-  text-decoration: underline;
-}
-
-footer h5 {
-  font-size: 1.25rem;
+.luxury-footer h5 {
+  font-size: 1.5rem;
+  color: #d4af37; /* Luxurious gold */
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-footer .list-unstyled li {
+.luxury-footer p {
+  font-size: 1rem;
+  font-family: 'Garamond', serif;
+  line-height: 1.6;
+  color: #f8f9fa; /* Light gray text for readability */
+}
+
+.footer-link {
+  color: #d4af37; /* Luxurious gold color for links */
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer-link:hover {
+  color: #fff; /* White color on hover */
+  /* Removed text-decoration: underline; */
+}
+
+.social-icon {
+  color: #d4af37; /* Luxurious gold color for icons */
+  font-size: 2rem;
+  margin-right: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff; /* White on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+hr.text-white {
+  border: 0;
+  border-top: 1px solid #d4af37; /* Gold divider */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .luxury-footer h5 {
+    font-size: 1.3rem; /* Smaller font size for headings on tablets */
+  }
+
+  .luxury-footer p {
+    font-size: 0.95rem; /* Slightly smaller paragraph text */
+  }
+
+  .social-icon {
+    font-size: 1.8rem; /* Adjust icon size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .luxury-footer h5 {
+    font-size: 1.2rem; /* Smaller font size for headings on mobile */
+  }
+
+  .luxury-footer p {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+  }
+
+  .social-icon {
+    font-size: 1.6rem; /* Adjust icon size for mobile */
+  }
+}
+/* Base styles */
+body {
+  background-color: #1a1a1a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section padding */
+.custom-padding-y {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Container */
+.custom-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section heading */
+.custom-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #d4af37; 
+  text-align: center;           /* 👈 Center text */
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);  /* 👈 Center the element itself */
+}
+
+.custom-heading::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background-color: gold;
+  display: block;
+  margin: 10px auto 0;
+}
+
+
+/* Row and column layout */
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.custom-column {
+  flex: 0 0 calc(33.333% - 30px);
+}
+
+/* Product card */
+.custom-product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.custom-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Product image */
+.custom-product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Card body */
+.custom-card-body {
+  padding: 25px 20px;
+  background: #fafafa;
+}
+
+/* Title & price */
+.custom-product-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
   margin-bottom: 10px;
 }
 
-footer .list-unstyled {
-  padding-left: 0;
+.custom-product-price {
+  font-size: 1.1rem;
+  color: #8c7500;
+  margin-bottom: 20px;
 }
 
-footer .text-white {
-  color: #ffffff !important;
+/* Buttons */
+.custom-btn-details,
+.custom-btn-buy {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
-footer i {
-  margin-right: 10px; /* Space between icon and text */
-  font-size: 1.5rem; /* Size of the icons */
+.custom-btn-details {
+  background-color: transparent;
+  color: #8c7500;
+  border: 2px solid #8c7500;
+}
+.custom-btn-details:hover {
+  background-color: #8c7500;
+  color: #fff;
 }
 
-footer .social-links {
-  padding-left: 0;
+.custom-btn-buy {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.custom-btn-buy:hover {
+  background-color: #000;
 }
 
-footer .social-links li {
-  list-style-type: none;
-}
-
-footer .social-links a {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-}
-
-footer .social-links a:hover {
-  color: #3399cc;
-}
-
-footer .social-links i {
-  font-size: 1.8rem; /* Larger icons for social media */
-  margin-right: 8px;
-}
-
-/* Responsive Adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  footer .row > div {
-    margin-bottom: 30px; /* Space out columns in mobile view */
-  }
-
-  footer h5 {
-    font-size: 1.1rem; /* Slightly smaller heading on mobile */
-  }
-
-  footer ul li {
-    font-size: 0.9rem; /* Smaller text on mobile */
-  }
-
-  footer .social-links i {
-    font-size: 1.5rem; /* Smaller icons on mobile */
-  }
-
-  footer .col-md-4 {
-    text-align: center; /* Center text on small screens */
-  }
-
-  footer .social-links {
-    display: flex;
-    justify-content: center; /* Center social links on small screens */
-  }
-
-  footer .social-links a {
-    margin: 0 10px; /* Space between social media icons */
+  .custom-column {
+      flex: 0 0 100%;
   }
 }
+
+.custom-product-detail-section {
+  background-color: #1a1a1a;
+  padding: 80px 20px;
+  color: #f0f0f0;
+}
+
+.custom-detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-detail-image img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.1);
+}
+
+.custom-detail-info {
+  max-width: 500px;
+}
+
+.custom-detail-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.custom-detail-price {
+  font-size: 1.5rem;
+  color: #e5c100;
+  margin-bottom: 20px;
+}
+
+.custom-detail-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.custom-detail-buttons a {
+  margin-right: 15px;
+}
+
+/* Reuse existing button styles */
 
