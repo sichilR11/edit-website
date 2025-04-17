@@ -635,6 +635,7 @@ html, body {
   color: #d4af37; /* Luxurious gold color for icons */
   font-size: 2rem;
   margin-right: 15px;
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
