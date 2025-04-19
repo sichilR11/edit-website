@@ -942,102 +942,100 @@ body {
   }
 }
 
-    /* Information Section */
-    .detail-info-section {
-        background-color: #1a1a1a;
-        padding: 60px 0;
-    }
+/* Information Section */
+.detail-info-section {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+}
 
-    .detail-custom-container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+.detail-custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Equal left and right padding for all screens */
+    box-sizing: border-box;
+    text-align: center; /* Center the text content inside */
+}
 
+.detail-info-text {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+.detail-info-text p {
+    margin-bottom: 20px;
+}
+
+/* Go Back Button */
+.detail-go-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #1a1a1a;
+    color: #d4af37;
+    padding: 12px 20px;
+    border: 2px solid #d4af37;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 999;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.detail-go-back-btn:hover {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
     .detail-info-text {
-        font-size: 1.2rem;
-        color: #fff;
-        line-height: 1.6;
-        margin-top: 30px;
-        text-align: center;
-    }
-
-    .detail-info-text p {
-        margin-bottom: 20px;
-    }
-
-    /* Go Back Button */
-    .detail-go-back-btn {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background-color: #1a1a1a;
-        color: #d4af37;
-        padding: 12px 20px;
-        border: 2px solid #d4af37;
-        border-radius: 30px;
         font-size: 1.1rem;
-        font-weight: 600;
-        text-decoration: none;
-        z-index: 999;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 8px;
-        transition: all 0.3s ease;
     }
 
-    .detail-go-back-btn:hover {
-        background-color: #d4af37;
-        color: #1a1a1a;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    .detail-go-back-btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-info-text {
+        font-size: 1rem;
     }
 
-    /* Responsive Styles */
-    @media (max-width: 1024px) {
-        .detail-info-text {
-            font-size: 1.1rem;
-        }
-
-        .detail-go-back-btn {
-            padding: 10px 15px;
-            font-size: 1rem;
-        }
+    .detail-go-back-btn {
+        padding: 10px 15px;
+        font-size: 1rem;
     }
 
-    @media (max-width: 768px) {
-        .detail-info-text {
-            font-size: 1rem;
-            text-align: left;
-            padding: 0 10px;
-        }
+    .detail-footer-text {
+        font-size: 0.9rem;
+    }
+}
 
-        .detail-go-back-btn {
-            padding: 10px 15px;
-            font-size: 1rem;
-        }
-
-        .detail-footer-text {
-            font-size: 0.9rem;
-        }
+@media (max-width: 480px) {
+    .detail-info-text {
+        font-size: 0.9rem;
     }
 
-    @media (max-width: 480px) {
-        .detail-info-text {
-            font-size: 0.9rem;
-        }
-
-        .detail-footer-text {
-            font-size: 0.8rem;
-        }
-
-        .detail-go-back-btn {
-            padding: 8px 12px;
-            font-size: 0.9rem;
-        }
+    .detail-footer-text {
+        font-size: 0.8rem;
     }
+
+    .detail-go-back-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
 
 /* Reuse existing button styles */
 
