@@ -409,6 +409,7 @@ html, body {
 
 /* Button Styling */
 .btn-primary {
+  width: 100%;
   background-color: #d4af37; /* Luxurious gold color */
   border-color: #d4af37;
   color: #fff;
