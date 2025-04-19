@@ -865,5 +865,125 @@ body {
   margin-right: 15px;
 }
 
+.custom-btn-buy {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.custom-btn-buy:hover {
+  background-color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-column {
+      flex: 0 0 100%;
+  }
+}
+
+.custom-product-detail-section {
+  background-color: #1a1a1a;
+  padding: 80px 20px;
+  color: #f0f0f0;
+}
+
+.custom-detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-detail-image img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.1);
+}
+
+.custom-detail-info {
+  max-width: 500px;
+}
+
+.custom-detail-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.custom-detail-price {
+  font-size: 1.5rem;
+  color: #e5c100;
+  margin-bottom: 20px;
+}
+
+.custom-detail-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.custom-detail-buttons a {
+  margin-right: 15px;
+}
+/* Go Back Button */
+.go-back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #1a1a1a; /* Original background color */
+  color: #d4af37; /* Original gold color */
+  padding: 12px 20px;
+  border: 2px solid #d4af37; /* Original border color */
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 999;
+  display: inline-flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Ensures text is centered horizontally inside button */
+  gap: 8px; /* Space between icon and text */
+  transition: all 0.3s ease;
+}
+
+.go-back-btn i {
+  font-size: 1.2rem;
+}
+
+/* Hover effect */
+.go-back-btn:hover {
+  background-color: #d4af37; /* Hover background color (gold) */
+  color: #1a1a1a; /* Change text color to dark on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .go-back-btn {
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .go-back-btn {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .go-back-btn i {
+    font-size: 1rem;
+  }
+}
+
 /* Reuse existing button styles */
 
